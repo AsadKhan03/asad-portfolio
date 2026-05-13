@@ -1,218 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Asad.Artist | Portfolio</title>
-
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
 </head>
-
 <body>
 
+<!-- LOADER -->
 <div id="loader">
-<h1>ASAD.ARTIST</h1>
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <span>ASAD.ARTIST</span>
+  </div>
 </div>
 
 <div id="particles-js"></div>
-
 <div class="cursor"></div>
+<div class="cursor-follower"></div>
 
+<!-- HEADER -->
 <header>
-
-<nav>
-
-<h2 class="logo">ASAD<span>.ARTIST</span></h2>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
+  <nav>
+    <h2 class="logo">ASAD<span>.ARTIST</span></h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" onclick="closeMobile()">Home</a></li>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#services" onclick="closeMobile()">Services</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
 </header>
 
 <!-- HERO -->
-
 <section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">✦ Available for Projects</div>
+    <h3 class="greeting">HELLO, I'M</h3>
+    <h1>Asad<br>Ahmed<br>Khan</h1>
+    <div class="role-tags">
+      <span>CS Student</span>
+      <span>Graphic Designer</span>
+      <span>Digital Marketer</span>
+    </div>
+    <p>Creating cinematic digital experiences with creativity, technology and innovation.</p>
+    <div class="buttons">
+      <a href="#about" class="btn">Explore Work</a>
+      <a href="#contact" class="btn btn2">Hire Me</a>
+    </div>
+  </div>
 
-<div class="hero-content">
-
-<h3>HELLO, I'M</h3>
-
-<h1>Asad Ahmed Khan</h1>
-
-<h2>
-Computer Science Student • Graphic Designer • Digital Marketer
-</h2>
-
-<p>
-Creating cinematic digital experiences with creativity, technology and innovation.
-</p>
-
-<div class="buttons">
-
-<a href="#about" class="btn">Explore</a>
-
-<a href="#contact" class="btn btn2">Hire Me</a>
-
-</div>
-
-</div>
-
-<!-- IMAGE -->
-
-<div class="hero-image">
-
-<div class="circle">
-    <img src="asad.png" alt="Asad Ahmed Khan">
-</div>
-
-
-
-</div>
-
+  <!-- FIXED IMAGE STRUCTURE: ring rotates, image stays still -->
+  <div class="hero-image">
+    <div class="image-wrapper">
+      <!-- Outer decorative ring that rotates -->
+      <div class="ring ring-outer"></div>
+      <!-- Inner dashed ring -->
+      <div class="ring ring-inner"></div>
+      <!-- Orbit dot -->
+      <div class="orbit-dot"></div>
+      <!-- The actual image — NOT inside the rotating ring -->
+      <div class="img-frame">
+        <img src="asad.png" alt="Asad Ahmed Khan">
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
-
 <section class="about" id="about">
-
-<div class="glass card">
-
-<h2>About Me</h2>
-
-<p>
-
-I am a passionate Computer Science student at HITMS Federal University with a strong interest in technology, digital creativity and innovation.
-
-I specialize in Graphic Designing, Web Development and Digital Marketing with experience in building Shopify stores and modern websites.
-
-My future goal is to specialize in Artificial Intelligence and become a successful entrepreneur in the tech industry.
-
-</p>
-
-</div>
-
+  <div class="section-label">01 — ABOUT</div>
+  <div class="about-grid">
+    <div class="about-text glass card">
+      <h2>About Me</h2>
+      <p>I am a passionate Computer Science student at <strong>HITMS Federal University</strong> with a strong interest in technology, digital creativity and innovation.</p>
+      <p>I specialize in Graphic Designing, Web Development and Digital Marketing with experience in building Shopify stores and modern websites.</p>
+      <p>My future goal is to specialize in <strong>Artificial Intelligence</strong> and become a successful entrepreneur in the tech industry.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat glass card">
+        <span class="stat-num">12+</span>
+        <span class="stat-label">Skills</span>
+      </div>
+      <div class="stat glass card">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Services</span>
+      </div>
+      <div class="stat glass card">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Passion</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SKILLS -->
-
 <section class="skills" id="skills">
-
-<h2 class="title">Skills</h2>
-
-<div class="skill-boxes">
-
-<div class="skill glass card">HTML5</div>
-<div class="skill glass card">CSS3</div>
-<div class="skill glass card">JavaScript</div>
-<div class="skill glass card">Graphic Designing</div>
-<div class="skill glass card">Canva</div>
-<div class="skill glass card">Photoshop</div>
-<div class="skill glass card">Digital Marketing</div>
-<div class="skill glass card">Java</div>
-<div class="skill glass card">C++</div>
-<div class="skill glass card">Arduino</div>
-<div class="skill glass card">MS Office</div>
-<div class="skill glass card">Shopify</div>
-
-</div>
-
+  <div class="section-label">02 — SKILLS</div>
+  <h2 class="title">My Stack</h2>
+  <div class="skill-boxes">
+    <div class="skill glass card"><i class="fab fa-html5"></i><span>HTML5</span></div>
+    <div class="skill glass card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+    <div class="skill glass card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+    <div class="skill glass card"><i class="fa fa-pen-nib"></i><span>Graphic Design</span></div>
+    <div class="skill glass card"><i class="fa fa-palette"></i><span>Canva</span></div>
+    <div class="skill glass card"><i class="fa fa-image"></i><span>Photoshop</span></div>
+    <div class="skill glass card"><i class="fab fa-instagram"></i><span>Digital Marketing</span></div>
+    <div class="skill glass card"><i class="fab fa-java"></i><span>Java</span></div>
+    <div class="skill glass card"><i class="fa fa-code"></i><span>C++</span></div>
+    <div class="skill glass card"><i class="fa fa-microchip"></i><span>Arduino</span></div>
+    <div class="skill glass card"><i class="fab fa-microsoft"></i><span>MS Office</span></div>
+    <div class="skill glass card"><i class="fab fa-shopify"></i><span>Shopify</span></div>
+  </div>
 </section>
 
 <!-- SERVICES -->
-
 <section class="services" id="services">
-
-<h2 class="title">Services</h2>
-
-<div class="service-container">
-
-<div class="service glass card">
-<h3>Graphic Designing</h3>
-<p>Professional logos, banners and social media designs.</p>
-</div>
-
-<div class="service glass card">
-<h3>Thumbnail Design</h3>
-<p>Modern cinematic thumbnails for creators.</p>
-</div>
-
-<div class="service glass card">
-<h3>Portfolio Websites</h3>
-<p>Responsive futuristic portfolio websites.</p>
-</div>
-
-<div class="service glass card">
-<h3>Shopify Stores</h3>
-<p>Professional Shopify setup and customization.</p>
-</div>
-
-<div class="service glass card">
-<h3>Online Tutoring</h3>
-<p>English language and computer learning classes.</p>
-</div>
-
-<div class="service glass card">
-<h3>DIT & CIT</h3>
-<p>Basic computer education and guidance.</p>
-</div>
-
-</div>
-
+  <div class="section-label">03 — SERVICES</div>
+  <h2 class="title">What I Do</h2>
+  <div class="service-container">
+    <div class="service glass card">
+      <div class="service-icon"><i class="fa fa-pen-ruler"></i></div>
+      <h3>Graphic Designing</h3>
+      <p>Professional logos, banners and social media designs that make brands stand out.</p>
+    </div>
+    <div class="service glass card">
+      <div class="service-icon"><i class="fa fa-film"></i></div>
+      <h3>Thumbnail Design</h3>
+      <p>Modern cinematic thumbnails for content creators that drive more clicks.</p>
+    </div>
+    <div class="service glass card">
+      <div class="service-icon"><i class="fa fa-globe"></i></div>
+      <h3>Portfolio Websites</h3>
+      <p>Responsive futuristic portfolio websites tailored to your identity.</p>
+    </div>
+    <div class="service glass card">
+      <div class="service-icon"><i class="fab fa-shopify"></i></div>
+      <h3>Shopify Stores</h3>
+      <p>Professional Shopify setup and customization for your business.</p>
+    </div>
+    <div class="service glass card">
+      <div class="service-icon"><i class="fa fa-chalkboard-teacher"></i></div>
+      <h3>Online Tutoring</h3>
+      <p>English language and computer learning classes for all levels.</p>
+    </div>
+    <div class="service glass card">
+      <div class="service-icon"><i class="fa fa-laptop-code"></i></div>
+      <h3>DIT & CIT</h3>
+      <p>Basic computer education and guidance for beginners.</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
-
-<div class="glass contact-box card">
-
-<h2>Contact Me</h2>
-
-<p>Email: asadkhan984320@gmail.com</p>
-
-<p>Phone: +92 304 2764912</p>
-
-<div class="socials">
-
-<a href="https://www.instagram.com/a_s_a_d__077" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/17gTdCBZDm/" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-</div>
-
-</div>
-
+  <div class="section-label">04 — CONTACT</div>
+  <h2 class="title">Let's Connect</h2>
+  <div class="glass contact-box card">
+    <p class="contact-intro">Have a project in mind? Let's build something great together.</p>
+    <div class="contact-details">
+      <a href="mailto:asadkhan984320@gmail.com" class="contact-item">
+        <i class="fa fa-envelope"></i>
+        <span>asadkhan984320@gmail.com</span>
+      </a>
+      <a href="tel:+923042764912" class="contact-item">
+        <i class="fa fa-phone"></i>
+        <span>+92 304 2764912</span>
+      </a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/a_s_a_d__077" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/17gTdCBZDm/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 ASAD.ARTIST — All Rights Reserved</p>
+  <p>© 2026 <span>ASAD.ARTIST</span> — All Rights Reserved</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
